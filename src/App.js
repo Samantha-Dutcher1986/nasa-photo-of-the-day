@@ -1,25 +1,16 @@
-import React from "react";
-import styled from 'styled-components';
-import "./App.css";
-import DailyApp from './DailyApp'
-
-const StyledApp = styled.div`
-  background-color: ${pr => pr.theme.darkPurple};
-  color: ${pr => pr.theme.white};
-`
-
-const StyledApiApps = styled.div`
-  background-color: ${pr => pr.theme.black};
-`
+import React from 'react';
+import Pic from './Photo';
+import theme from './theme';
+import './App.css';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
   return (
-    <StyledApp className="App">
-      <h1>NASA API's</h1>
-      <StyledApiApps>
-        <DailyApp />
-      </StyledApiApps>
-    </StyledApp>
+    <div className='App'>
+      <ThemeProvider theme={theme}>
+        <Pic />
+      </ThemeProvider>
+    </div>
   );
 }
 
