@@ -33,7 +33,7 @@ const PicBtn = styled.button`
 `
 
 const PicImg = styled.img`
-    border: ${prop => props.wheatBorder};
+    border: ${props => props.wheatBorder};
     box-shadow: 8px 8px 8px 8px #000000;
 `
 
@@ -41,7 +41,7 @@ const Pic = () => {
     const [picData, setPicData] = useState('');
     const [count, setCount] = useState(0);
 
-    useEffect((event) => {
+    useEffect(() => {
         const url = `https://api.nasa.gov/planetary/apod?api_key=V0WSaey6S6VCtwwhHuUVzDY7giVQ2BTTmcxz3EO6&date=2021-04-11${count}`
 
     axios

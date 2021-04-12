@@ -18,7 +18,7 @@ function DailyApp() {
                 setNasaData(res.data)
                 console.log(nasaData);
             })
-            .catch(err => {
+            .catch(error() => {
                 console.log('ERROR');
             })
     }, [])
