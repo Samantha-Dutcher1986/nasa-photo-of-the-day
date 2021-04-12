@@ -1,13 +1,15 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import Pic from './Photo';
+import theme from './theme';
+import './App.css';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+    <div className='App'>
+      <ThemeProvider theme={theme}>
+        <Pic />
+      </ThemeProvider>
     </div>
   );
 }
